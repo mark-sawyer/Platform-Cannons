@@ -12,37 +12,28 @@ public class CannonBoy : MonoBehaviour {
 
     [SerializeField] private float JUMP_VELOCITY = 5;
     private float jumpSpriteChangeDelay;
+    private float lastDirectionBuffer = 1;
 
     void Update() {
-        switch (state) {
-            case CannonBoyState.STANDING:
-                if (Input.GetKeyDown("space")) {
-                    rb.velocity = new Vector2(0, JUMP_VELOCITY);
-                    enterJump();
-                }
-                else if (Input.GetAxisRaw("Horizontal") != 0) {
-                    rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
-                    state = CannonBoyState.RUNNING;
-                    anim.SetTrigger("start running");
-                }
-                else {
-                    rb.velocity = Vector2.zero;
-                }
-                break;
 
-            case CannonBoyState.RUNNING:
+        switch (state) {
+            case CannonBoyState.GROUNDED:
                 if (Input.GetKeyDown("space")) {
                     rb.velocity = new Vector2(rb.velocity.x, JUMP_VELOCITY);
-                    enterJump();
+                    jumpSpriteChangeDelay = 0.1f;
+                    state = CannonBoyState.JUMPING;
+                    anim.SetTrigger("enter jump");
                 }
-                else if (Input.GetAxisRaw("Horizontal") == 0) {
-                    rb.velocity = Vector2.zero;
-                    state = CannonBoyState.STANDING;
-                    anim.SetTrigger("stop running");
+                else {
+                    anim.SetFloat("horizontal", Input.GetAxisRaw("Horizontal"));
+                    rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), rb.velocity.y);
                 }
+
                 break;
 
             case CannonBoyState.JUMPING:
+                anim.SetFloat("horizontal", rb.velocity.x);
+
                 if (jumpSpriteChangeDelay > 0) {
                     jumpSpriteChangeDelay -= Time.deltaTime;
                 }
@@ -50,22 +41,15 @@ public class CannonBoy : MonoBehaviour {
                 Collider2D platformHit = Physics2D.OverlapBox(bc.bounds.center, bc.bounds.size, 0f, platformLayerMask);
 
                 if (platformHit != null && jumpSpriteChangeDelay <= 0) {
-                    state = CannonBoyState.STANDING;
+                    state = CannonBoyState.GROUNDED;
                     anim.SetTrigger("land jump");
                 }
                 break;
         }
     }
-
-    private void enterJump() {
-        jumpSpriteChangeDelay = 0.1f;
-        state = CannonBoyState.JUMPING;
-        anim.SetTrigger("enter jump");
-    }
 }
 
 public enum CannonBoyState {
-    STANDING,
-    RUNNING,
+    GROUNDED,
     JUMPING
 };
