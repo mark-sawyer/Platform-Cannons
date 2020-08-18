@@ -5,6 +5,8 @@ TextureImporter:
     21300000: pink cannon 0
     21300002: pink cannon 1
     21300004: pink cannon 2
+    21300006: pink cannon 3
+    21300008: pink cannon 4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -112,7 +114,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5aeb23164b8a76c4988f1ddb7bcf13d8
+      spriteID: c8ecd653c45424946a4804923faadb60
       vertices: []
       indices: 
       edges: []
@@ -132,7 +134,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 859f2795bbec52041bc3447e812f8e4e
+      spriteID: 4aaf1335e3c807f4aaf1fcc4a549fe01
       vertices: []
       indices: 
       edges: []
@@ -152,7 +154,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07b896519827d8049833fd2dc01e9a50
+      spriteID: f1e0111d0e6dadb459a25977a0373dc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink cannon 3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 40
+        width: 60
+        height: 40
+      alignment: 9
+      pivot: {x: 0.23, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8698ed9e75bbcab4591825e969a988d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pink cannon 4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 60
+        height: 40
+      alignment: 9
+      pivot: {x: 0.23, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69988542f52d90468dbe424a8baab4b
       vertices: []
       indices: 
       edges: []

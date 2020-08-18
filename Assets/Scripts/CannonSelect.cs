@@ -9,6 +9,7 @@ public class CannonSelect : MonoBehaviour {
         if (isBeingHeld) {
             if (!Input.GetMouseButton(0)) {
                 isBeingHeld = false;
+                GameEvents.cannonReleased.Invoke();
             }
             else {
                 Vector2 mouseVector = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
