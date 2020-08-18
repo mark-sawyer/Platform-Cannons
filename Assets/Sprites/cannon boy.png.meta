@@ -25,11 +25,6 @@ TextureImporter:
     21300040: cannon boy 20
     21300042: cannon boy 21
     21300044: cannon boy 22
-    21300046: cannon boy 23
-    21300048: cannon boy 24
-    21300050: cannon boy 25
-    21300052: cannon boy 26
-    21300054: cannon boy 27
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -88,7 +83,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 93
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -105,9 +100,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,7 +110,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d27746a82ca6154b8cbe0dde8f40fcb
+      spriteID: e8c1e7b779d571145b22bf2c235b40c1
       vertices: []
       indices: 
       edges: []
@@ -125,9 +120,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,7 +130,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86328cda2bf02d74d82222d01db8c65d
+      spriteID: 1bbf1264ca380314e9ae7fc6fba4b688
       vertices: []
       indices: 
       edges: []
@@ -145,9 +140,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,7 +150,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 37b726d682a111d4893d180330688d1c
+      spriteID: 118b14fc1f3fe354487ad3ea18c68cdd
       vertices: []
       indices: 
       edges: []
@@ -165,9 +160,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,7 +170,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8512c868c78bcb64aaafaebaccccf6f8
+      spriteID: b5573e2aeddc96a428b09b3ef7962b45
       vertices: []
       indices: 
       edges: []
@@ -185,9 +180,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,7 +190,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22ef14627d34e134cb92de040524d5d9
+      spriteID: 4686e36f1b83d094d8e9a0c17d28dc7f
       vertices: []
       indices: 
       edges: []
@@ -205,9 +200,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,7 +210,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c8ce51cb1cadd624d989c42312fe3e21
+      spriteID: eb729703972f5eb4ab4d74834414ec36
       vertices: []
       indices: 
       edges: []
@@ -225,9 +220,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,7 +230,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e991f929ccb3f204481495c3a77faa11
+      spriteID: cd362f1370967a248aa7fbe05021c36d
       vertices: []
       indices: 
       edges: []
@@ -244,10 +239,10 @@ TextureImporter:
       name: cannon boy 7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 0
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,7 +250,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c92cef366dffbdb4cb2f29e1f31724e9
+      spriteID: dcd047a1a63af26469fb945d1d1c891f
       vertices: []
       indices: 
       edges: []
@@ -264,10 +259,10 @@ TextureImporter:
       name: cannon boy 8
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 0
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,7 +270,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ce5f8431d6c06647b1fbcf3c73dfd9f
+      spriteID: 0cb16940b37051c49986e33201578cb4
       vertices: []
       indices: 
       edges: []
@@ -284,10 +279,10 @@ TextureImporter:
       name: cannon boy 9
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 0
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,7 +290,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c72df0e771bfa57429461d847875d536
+      spriteID: b70cf7222a9d0e949b61b2976c897df6
       vertices: []
       indices: 
       edges: []
@@ -304,10 +299,10 @@ TextureImporter:
       name: cannon boy 10
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
+        x: 0
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,7 +310,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55d74ff587f71664387ea0064ed2fdef
+      spriteID: 2315c2b4ef9b5cc4797261cb7581349e
       vertices: []
       indices: 
       edges: []
@@ -324,10 +319,10 @@ TextureImporter:
       name: cannon boy 11
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
+        x: 31
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,7 +330,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2cff49308bea7e44cb722c4836bb62bf
+      spriteID: eeac73c4fbb8e044ab5de06683cf0afc
       vertices: []
       indices: 
       edges: []
@@ -344,10 +339,10 @@ TextureImporter:
       name: cannon boy 12
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
+        x: 31
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,7 +350,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8912829574bbc974080e1b29b378fba3
+      spriteID: ad5b3546d5914eb4ba366f419728570f
       vertices: []
       indices: 
       edges: []
@@ -364,10 +359,10 @@ TextureImporter:
       name: cannon boy 13
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
+        x: 31
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,7 +370,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98d1fadea50074a41a2e6febdcaa9872
+      spriteID: 01b9404fc25480844844ce52938e1969
       vertices: []
       indices: 
       edges: []
@@ -384,10 +379,10 @@ TextureImporter:
       name: cannon boy 14
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 62
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,7 +390,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 835594320127c3042a2403b5d6f45c77
+      spriteID: 7ab8b8f252a568e4f96fb287efa0f966
       vertices: []
       indices: 
       edges: []
@@ -404,10 +399,10 @@ TextureImporter:
       name: cannon boy 15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 62
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,7 +410,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b304384de8c1774899534a578b365a7
+      spriteID: 882fd830672c4194e81016291bf72d59
       vertices: []
       indices: 
       edges: []
@@ -425,9 +420,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 0
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -435,7 +430,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 730c452a861491a468a7a15bdbb2d27e
+      spriteID: 0d49651e73041fe449930136448a27f1
       vertices: []
       indices: 
       edges: []
@@ -444,10 +439,10 @@ TextureImporter:
       name: cannon boy 17
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
+        x: 31
+        y: 0
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,7 +450,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e849fd70b080204887819ebdc5569e3
+      spriteID: 732167380c53324449736df509f51634
       vertices: []
       indices: 
       edges: []
@@ -464,10 +459,10 @@ TextureImporter:
       name: cannon boy 18
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 31
+        y: 0
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,7 +470,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 762a7d2f99311b44c9d25d39848fccaa
+      spriteID: bcf0d24770339f44fb6574fa5b7e0d0a
       vertices: []
       indices: 
       edges: []
@@ -484,10 +479,10 @@ TextureImporter:
       name: cannon boy 19
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 0
+        y: 0
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -495,7 +490,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c9b8e0914d96b2469ba166d3ac673e8
+      spriteID: c64ef14181ac5e6468b07f0b01c1ce93
       vertices: []
       indices: 
       edges: []
@@ -504,130 +499,10 @@ TextureImporter:
       name: cannon boy 20
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b369d3ca72665fd418d208af6be4324c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cannon boy 21
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 21d40a1450980af44870ea12f7a869be
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cannon boy 22
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 184440a0515c63247a53fc0655560b8e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cannon boy 23
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 430704e9693cba94ea40545553b653d4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cannon boy 24
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3727c53ca3542d64e930fe70ce4edb57
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cannon boy 25
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 09ac68548b84fd64ab4fe6792d0f9208
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cannon boy 26
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 62
         y: 0
-        width: 32
-        height: 32
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -635,27 +510,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5da584e28229de144bb616c32b582a74
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cannon boy 27
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87656fd13872671419f15772eaaa360a
+      spriteID: 815bb41449741794aa6e2886264a57d4
       vertices: []
       indices: 
       edges: []
@@ -663,7 +518,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 96d1012202dd14a42aec575279c6c6f5
+    spriteID: 919556ed07cb80a4b9cb194a0ba8e0f3
     vertices: []
     indices: 
     edges: []

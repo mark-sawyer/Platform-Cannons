@@ -4,52 +4,45 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CannonBoy : MonoBehaviour {
-    public static CannonBoyState state;
     public LayerMask platformLayerMask;
     public BoxCollider2D bc;
     public Rigidbody2D rb;
     public Animator anim;
 
-    [SerializeField] private float JUMP_VELOCITY = 5;
-    private float jumpSpriteChangeDelay;
-    private float lastDirectionBuffer = 1;
+    [SerializeField] private float JUMP_VELOCITY = 6;
+    [SerializeField] private float MOVE_SPEED = 5;
+    private float horizontalMove;
+    private bool facingRight = true;
+    private bool grounded;
 
-    void Update() {
+    private void Update() {
+        grounded = isGrounded();
+        anim.SetBool("is airborne", !grounded);
 
-        switch (state) {
-            case CannonBoyState.GROUNDED:
-                if (Input.GetKeyDown("space")) {
-                    rb.velocity = new Vector2(rb.velocity.x, JUMP_VELOCITY);
-                    jumpSpriteChangeDelay = 0.1f;
-                    state = CannonBoyState.JUMPING;
-                    anim.SetTrigger("enter jump");
-                }
-                else {
-                    anim.SetFloat("horizontal", Input.GetAxisRaw("Horizontal"));
-                    rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), rb.velocity.y);
-                }
-
-                break;
-
-            case CannonBoyState.JUMPING:
-                anim.SetFloat("horizontal", rb.velocity.x);
-
-                if (jumpSpriteChangeDelay > 0) {
-                    jumpSpriteChangeDelay -= Time.deltaTime;
-                }
-
-                Collider2D platformHit = Physics2D.OverlapBox(bc.bounds.center, bc.bounds.size, 0f, platformLayerMask);
-
-                if (platformHit != null && jumpSpriteChangeDelay <= 0) {
-                    state = CannonBoyState.GROUNDED;
-                    anim.SetTrigger("land jump");
-                }
-                break;
+        // Movement
+        horizontalMove = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(horizontalMove * MOVE_SPEED, rb.velocity.y);
+        anim.SetFloat("speed", Mathf.Abs(rb.velocity.x));
+        if ((horizontalMove < 0 && facingRight) || (horizontalMove > 0 && !facingRight)) {
+            flipSprite();
         }
+
+        // Jumping
+        if (Input.GetKeyDown("space") && grounded) {
+            rb.velocity = new Vector2(rb.velocity.x, JUMP_VELOCITY);
+        }
+
+    }
+
+
+    private bool isGrounded() {
+        Collider2D collider = Physics2D.OverlapBox(bc.bounds.center + new Vector3(0, -bc.bounds.size.y * 0.2f, 0), bc.size, 0f, platformLayerMask);
+        return collider != null;
+    }
+
+    private void flipSprite() {
+        facingRight = !facingRight;
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 }
 
-public enum CannonBoyState {
-    GROUNDED,
-    JUMPING
-};
