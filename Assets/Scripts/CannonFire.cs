@@ -5,7 +5,7 @@ using UnityEngine;
 public class CannonFire : MonoBehaviour {
     public GameObject cannonBall;
     public Animator anim;
-    [SerializeField] private float cannonBallSpeed = 12.5f;
+    private float cannonBallSpeed = 12.5f;
 
     private void Start() {
         GameEvents.fireCannons.AddListener(fire);
@@ -21,5 +21,9 @@ public class CannonFire : MonoBehaviour {
 
     public void setCannonBallSpeed(float speed) {
         cannonBallSpeed = speed;
+    }
+
+    public float getVelocity() {
+        return cannonBallSpeed;
     }
 }

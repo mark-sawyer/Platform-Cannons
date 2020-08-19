@@ -5,6 +5,7 @@ using UnityEngine;
 public class CannonInputManager : MonoBehaviour {
     [SerializeField] private LayerMask cannonLayer;
     private bool canFire = true;
+    private GameObject cannonMouseIsOver;
 
     private void Start() {
         GameEvents.cannonReleased.AddListener(setCanFire);
@@ -14,29 +15,40 @@ public class CannonInputManager : MonoBehaviour {
 
     void Update() {
         if (canFire) {
-            if (Input.GetMouseButtonDown(0)) {
-                RaycastHit2D ray = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, cannonLayer);
-                if (ray.collider != null) {
-                    canFire = false;
-                    ray.collider.GetComponent<CannonSelect>().startBeingAimed();
-                }
-            }
-
-            else if (Input.GetMouseButton(1)) {
-                RaycastHit2D ray = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, cannonLayer);
-                if (ray.collider != null) {
-                    canFire = false;
-                    ray.collider.GetComponent<CannonSelect>().startBeingAdjusted();
-                }
-            }
-
-            else if (Input.GetKeyDown("space")) {
+            if (Input.GetKeyDown("space")) {
                 GameEvents.fireCannons.Invoke();
+            }
+            else {
+                RaycastHit2D ray = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, cannonLayer);
+                if (ray.collider != null) {
+                    if (cannonMouseIsOver == null) {
+                        cannonMouseIsOver = ray.collider.gameObject;
+                        cannonMouseIsOver.GetComponent<CannonSelect>().showTransparentSlider();
+                    }
+
+                    if (Input.GetMouseButtonDown(0)) {
+                        canFire = false;
+                        cannonMouseIsOver.GetComponent<CannonSelect>().startBeingAimed();
+                    }
+                    else if (Input.GetMouseButtonDown(1)) {
+                        canFire = false;
+                        cannonMouseIsOver.GetComponent<CannonSelect>().removeTransparentSlider();
+                        cannonMouseIsOver.GetComponent<CannonSelect>().startBeingAdjusted();
+                    }
+                }
+                else if (cannonMouseIsOver != null) {
+                    cannonMouseIsOver.GetComponent<CannonSelect>().removeTransparentSlider();
+                    cannonMouseIsOver = null;
+                }
             }
         }
     }
 
     private void setCanFire() {
         canFire = true;
+        RaycastHit2D ray = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, cannonLayer);
+        if (ray.collider != null && ray.collider.gameObject == cannonMouseIsOver) {
+            cannonMouseIsOver.GetComponent<CannonSelect>().showTransparentSlider();
+        }
     }
 }
