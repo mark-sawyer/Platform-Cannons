@@ -13,16 +13,26 @@ public class CannonInputManager : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetMouseButtonDown(0)) {
-            RaycastHit2D ray = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, cannonLayer);
-            if (ray.collider != null) {
-                canFire = false;
-                ray.collider.GetComponent<CannonSelect>().startBeingHeld();
+        if (canFire) {
+            if (Input.GetMouseButtonDown(0)) {
+                RaycastHit2D ray = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, cannonLayer);
+                if (ray.collider != null) {
+                    canFire = false;
+                    ray.collider.GetComponent<CannonSelect>().startBeingAimed();
+                }
             }
-        }
 
-        if (Input.GetKeyDown("space") && canFire) {
-            GameEvents.fireCannons.Invoke();
+            else if (Input.GetMouseButton(1)) {
+                RaycastHit2D ray = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, cannonLayer);
+                if (ray.collider != null) {
+                    canFire = false;
+                    ray.collider.GetComponent<CannonSelect>().startBeingAdjusted();
+                }
+            }
+
+            else if (Input.GetKeyDown("space")) {
+                GameEvents.fireCannons.Invoke();
+            }
         }
     }
 

@@ -169,6 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da7cce2b442465458cfb77e19da3890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sliderPrefab: {fileID: 2052034244308061552, guid: 53495a2f0cc268c45bb5ed9a15717106,
+    type: 3}
 --- !u!114 &114186133496840400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,3 +186,4 @@ MonoBehaviour:
   cannonBall: {fileID: 1638653401311314627, guid: 5cf4ac4e79fc41e459c2492c7468fe4c,
     type: 3}
   anim: {fileID: 0}
+  cannonBallSpeed: 0
