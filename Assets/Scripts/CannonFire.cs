@@ -5,6 +5,7 @@ using UnityEngine;
 public class CannonFire : MonoBehaviour {
     public GameObject cannonBall;
     public Animator anim;
+    [SerializeField] private float cannonBallSpeed = 5;
 
     private void Start() {
         GameEvents.fireCannons.AddListener(fire);
@@ -13,6 +14,8 @@ public class CannonFire : MonoBehaviour {
 
     private void fire() {
         anim.SetTrigger("fire");
-        Instantiate(cannonBall, transform.position, transform.rotation);
+        Vector3 direction = new Vector3(Mathf.Cos(transform.eulerAngles.z * Mathf.Deg2Rad), Mathf.Sin(transform.eulerAngles.z * Mathf.Deg2Rad), 0);
+        GameObject firedCannonBall = Instantiate(cannonBall, transform.position + direction, Quaternion.identity);
+        firedCannonBall.GetComponent<CannonBall>().setInitialVelocity(cannonBallSpeed, direction);
     }
 }
