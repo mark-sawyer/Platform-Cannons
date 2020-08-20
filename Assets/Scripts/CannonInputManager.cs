@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CannonInputManager : MonoBehaviour {
     [SerializeField] private LayerMask cannonLayer;
-    private bool canFire = true;
+    public static bool canFire = true;
     private GameObject cannonMouseIsOver;
 
     private void Start() {
@@ -17,6 +17,7 @@ public class CannonInputManager : MonoBehaviour {
         if (canFire) {
             if (Input.GetKeyDown("space")) {
                 GameEvents.fireCannons.Invoke();
+                canFire = false;
             }
             else {
                 RaycastHit2D ray = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, cannonLayer);

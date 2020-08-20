@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6584001304177646361}
   - component: {fileID: 9036139331689043562}
   - component: {fileID: 4214979448310427452}
+  - component: {fileID: 95275161736919436}
   - component: {fileID: 114521519925086872}
   m_Layer: 0
   m_Name: cannon ball
@@ -119,6 +120,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!95 &95275161736919436
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638653401311314627}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9862839cfb9565e4a814070e2be6aa7d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114521519925086872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,4 +152,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6584001304177646361}
+  anim: {fileID: 95275161736919436}
   initialVelocity: 0
