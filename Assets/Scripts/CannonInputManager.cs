@@ -14,10 +14,9 @@ public class CannonInputManager : MonoBehaviour {
     }
 
     void Update() {
-        if (canFire) {
+        if (LevelStageManager.levelStage == LevelStage.AIMING && canFire) {
             if (Input.GetKeyDown("space")) {
                 GameEvents.fireCannons.Invoke();
-                canFire = false;
             }
             else {
                 RaycastHit2D ray = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0, cannonLayer);
