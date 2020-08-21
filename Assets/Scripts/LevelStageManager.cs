@@ -7,6 +7,7 @@ public class LevelStageManager : MonoBehaviour {
     public static float timer;
     public static bool doStuff;
     public static bool beenThroughAFrame;
+    public static bool aBlueHasDropped;
 
     private float TIME_BEFORE_DISAPPEAR = 3;
     private float TIME_FOR_PLATFORM_TRANSFORM = 1.5f;
@@ -71,17 +72,20 @@ public class LevelStageManager : MonoBehaviour {
                     break;
                     
                 case LevelStage.PLATFORMING:
-                    if (Input.GetKeyDown("r")) {
+                    if (Input.GetKeyDown("r") || (aBlueHasDropped && Input.GetKeyDown("e"))) {
                         GameEvents.disappearPlatforms.Invoke();
                         GameEvents.disappearCannonBoy.Invoke();
+                        GameEvents.relockKey.Invoke();
 
                         levelStage = LevelStage.AIMING;
                         doStuff = false;
                         timer = TIME_FOR_PLATFORM_TO_DISAPPEAR;
+                        aBlueHasDropped = false;
                     }
                     else if (Input.GetKeyDown("e")) {
                         GameEvents.disappearCannonBoy.Invoke();
                         GameEvents.appearCannonBoy.Invoke();
+                        GameEvents.relockKey.Invoke();
                     }
                     break;
             }

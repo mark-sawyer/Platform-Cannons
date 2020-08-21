@@ -21,6 +21,7 @@ public class Blue : MonoBehaviour {
             drop = true;
             player = collision.gameObject;
             player.GetComponent<CannonBoy>().droppingWithBlue = true;
+            LevelStageManager.aBlueHasDropped = true;
         }
     }
 }

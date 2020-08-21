@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 3894373831345569098}
   - component: {fileID: 5738066901366399537}
   - component: {fileID: 114287921723717944}
+  - component: {fileID: 114674516881694458}
   m_Layer: 8
-  m_Name: platform
+  m_Name: platform pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +101,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 0.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &61307998215429442
@@ -174,3 +175,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 95553022525329382}
+--- !u!114 &114674516881694458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2877427150206258168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16078f6865105924e957c7481fc225e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

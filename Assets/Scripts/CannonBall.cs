@@ -20,10 +20,6 @@ public class CannonBall : MonoBehaviour {
         anim.SetTrigger("disappear");
     }
 
-    private void destroy() {
-        Destroy(gameObject);
-    }
-
     private void becomePlatform() {
         Instantiate(platform, transform.position, Quaternion.identity);
         Destroy(gameObject);

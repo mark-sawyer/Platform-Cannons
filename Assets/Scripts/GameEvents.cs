@@ -11,4 +11,6 @@ public class GameEvents : MonoBehaviour {
     public static UnityEvent appearCannonBoy = new UnityEvent();
     public static UnityEvent disappearPlatforms = new UnityEvent();
     public static UnityEvent disappearCannonBoy = new UnityEvent();
+    public static UnityEvent unlockKey = new UnityEvent();
+    public static UnityEvent relockKey = new UnityEvent();
 }

@@ -68,7 +68,6 @@ public class CannonBoy : MonoBehaviour {
         }
     }
 
-
     private bool isGrounded() {
         Collider2D collider = Physics2D.OverlapBox(bc.bounds.center + new Vector3(0, -bc.bounds.size.y * 0.2f, 0),
                                                    bc.bounds.size + new Vector3(-0.1f, 0, 0), 0f, platformLayerMask);
@@ -98,10 +97,6 @@ public class CannonBoy : MonoBehaviour {
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
         anim.SetTrigger("disappear");
-    }
-
-    private void destroySelf() {
-        Destroy(gameObject);
     }
 
     public void beginNextLevelTransition() {

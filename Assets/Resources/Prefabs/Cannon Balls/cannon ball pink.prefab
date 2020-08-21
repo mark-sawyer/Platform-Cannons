@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4214979448310427452}
   - component: {fileID: 95275161736919436}
   - component: {fileID: 114521519925086872}
+  - component: {fileID: 114522244619921624}
   m_Layer: 0
   m_Name: cannon ball pink
   m_TagString: Untagged
@@ -155,3 +156,15 @@ MonoBehaviour:
   anim: {fileID: 95275161736919436}
   platform: {fileID: 2877427150206258168, guid: 2f975c7f7a6e9d54581e5d6a4d8bec3e,
     type: 3}
+--- !u!114 &114522244619921624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638653401311314627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16078f6865105924e957c7481fc225e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 889307107098045290}
   - component: {fileID: 8635627931201719999}
   - component: {fileID: 2627867386274116840}
+  - component: {fileID: 114059214764118886}
   m_Layer: 0
   m_Name: cannon ball purple
   m_TagString: Untagged
@@ -155,3 +156,15 @@ MonoBehaviour:
   anim: {fileID: 8635627931201719999}
   platform: {fileID: 5434920233989075585, guid: af2b865f07f0dd24c96cacdb525d2663,
     type: 3}
+--- !u!114 &114059214764118886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3830197453384551001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16078f6865105924e957c7481fc225e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

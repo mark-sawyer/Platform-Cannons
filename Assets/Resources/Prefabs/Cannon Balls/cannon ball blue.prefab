@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7762121115959403359}
   - component: {fileID: 1168690443633215114}
   - component: {fileID: 4870611572087422173}
+  - component: {fileID: 114575591446562602}
   m_Layer: 0
   m_Name: cannon ball blue
   m_TagString: Untagged
@@ -155,3 +156,15 @@ MonoBehaviour:
   anim: {fileID: 1168690443633215114}
   platform: {fileID: 5000913016384900348, guid: 478e5d0d6bc412f469653ecfb078d1fd,
     type: 3}
+--- !u!114 &114575591446562602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5965145626919895660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16078f6865105924e957c7481fc225e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

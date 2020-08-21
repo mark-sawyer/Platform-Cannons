@@ -16,8 +16,4 @@ public class Platform : MonoBehaviour {
 
         anim.SetTrigger("disappear");
     }
-
-    private void destroySelf() {
-        Destroy(gameObject);
-    }
 }
