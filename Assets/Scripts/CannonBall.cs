@@ -9,7 +9,7 @@ public class CannonBall : MonoBehaviour {
     [SerializeField] private float initialVelocity;
 
     private void Start() {
-        GameEvents.disappearCannons.AddListener(disappear);
+        GameEvents.disappearCannonBalls.AddListener(disappear);
         GameEvents.platformation.AddListener(becomePlatform);
     }
 

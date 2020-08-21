@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: cannon ball_disappear
+  m_Name: cannon boy_disappear
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,23 +20,23 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300002, guid: 28af3dc483549354291699bb5619c46c, type: 3}
+      value: {fileID: 21300084, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
     - time: 0.1
-      value: {fileID: 21300004, guid: 28af3dc483549354291699bb5619c46c, type: 3}
+      value: {fileID: 21300086, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
     - time: 0.2
-      value: {fileID: 21300006, guid: 28af3dc483549354291699bb5619c46c, type: 3}
+      value: {fileID: 21300088, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
     - time: 0.3
-      value: {fileID: 21300008, guid: 28af3dc483549354291699bb5619c46c, type: 3}
+      value: {fileID: 21300090, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
     - time: 0.4
-      value: {fileID: 21300010, guid: 28af3dc483549354291699bb5619c46c, type: 3}
+      value: {fileID: 21300092, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
     - time: 0.5
-      value: {fileID: 21300012, guid: 28af3dc483549354291699bb5619c46c, type: 3}
+      value: {fileID: 21300094, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
     - time: 0.6
-      value: {fileID: 21300014, guid: 28af3dc483549354291699bb5619c46c, type: 3}
+      value: {fileID: 21300096, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
     - time: 0.70000005
-      value: {fileID: 21300016, guid: 28af3dc483549354291699bb5619c46c, type: 3}
+      value: {fileID: 21300098, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
     - time: 0.7833334
-      value: {fileID: 21300016, guid: 28af3dc483549354291699bb5619c46c, type: 3}
+      value: {fileID: 21300098, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -56,15 +56,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300002, guid: 28af3dc483549354291699bb5619c46c, type: 3}
-    - {fileID: 21300004, guid: 28af3dc483549354291699bb5619c46c, type: 3}
-    - {fileID: 21300006, guid: 28af3dc483549354291699bb5619c46c, type: 3}
-    - {fileID: 21300008, guid: 28af3dc483549354291699bb5619c46c, type: 3}
-    - {fileID: 21300010, guid: 28af3dc483549354291699bb5619c46c, type: 3}
-    - {fileID: 21300012, guid: 28af3dc483549354291699bb5619c46c, type: 3}
-    - {fileID: 21300014, guid: 28af3dc483549354291699bb5619c46c, type: 3}
-    - {fileID: 21300016, guid: 28af3dc483549354291699bb5619c46c, type: 3}
-    - {fileID: 21300016, guid: 28af3dc483549354291699bb5619c46c, type: 3}
+    - {fileID: 21300084, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
+    - {fileID: 21300086, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
+    - {fileID: 21300088, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
+    - {fileID: 21300090, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
+    - {fileID: 21300092, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
+    - {fileID: 21300094, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
+    - {fileID: 21300096, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
+    - {fileID: 21300098, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
+    - {fileID: 21300098, guid: a4d4cb66a9d2d3b4fb59c8a291a662f1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -91,7 +91,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.78333336
-    functionName: destroy
+    functionName: destroySelf
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

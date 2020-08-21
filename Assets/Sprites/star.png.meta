@@ -1,16 +1,18 @@
 fileFormatVersion: 2
-guid: 28af3dc483549354291699bb5619c46c
+guid: 8f004d3ac4c6c234bb5c62800b2e9839
 TextureImporter:
   fileIDToRecycleName:
-    21300000: cannon ball 0
-    21300002: cannon ball 1
-    21300004: cannon ball 2
-    21300006: cannon ball 3
-    21300008: cannon ball 4
-    21300010: cannon ball 5
-    21300012: cannon ball 6
-    21300014: cannon ball 7
-    21300016: cannon ball 8
+    21300000: star 0
+    21300002: star 1
+    21300004: star 2
+    21300006: star 3
+    21300008: star 4
+    21300010: star 5
+    21300012: star 6
+    21300014: star 7
+    21300016: star 8
+    21300018: star 9
+    21300020: star 10
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -69,7 +71,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 36
+    maxTextureSize: 96
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -82,13 +84,93 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cannon ball 0
+      name: star 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2db22b6c51ac248921d0db66045e46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star 1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecb57aa31594de14e97c5024f672a27c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star 2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1ddd607d8f7544fa83d24c4e35ddde
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star 3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce2a88daacb3d94e9f68ef7a86e6bb5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star 4
       rect:
         serializedVersion: 2
         x: 0
         y: 24
-        width: 12
-        height: 12
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -96,39 +178,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a79ecac820e96f947aa53a058c00dcd8
+      spriteID: 22377946c23cd57419be626e73e90f20
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cannon ball 1
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 24
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b91c5aa6ce873a40910c49a7aa55cf9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cannon ball 2
+      name: star 5
       rect:
         serializedVersion: 2
         x: 24
         y: 24
-        width: 12
-        height: 12
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,19 +198,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d25c38ef57e04e4886016f75558b70c
+      spriteID: 347436205215e6f4898a980f1ebfc0e5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cannon ball 3
+      name: star 6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 12
-        width: 12
-        height: 12
+        x: 48
+        y: 24
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,19 +218,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d6e3a48b30354d47a2998586f3d238f
+      spriteID: eed232cdae6ede34686a5656d8406c65
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cannon ball 4
+      name: star 7
       rect:
         serializedVersion: 2
-        x: 12
-        y: 12
-        width: 12
-        height: 12
+        x: 72
+        y: 24
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,39 +238,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4661b3c13997064cbac2d92375948c0
+      spriteID: b54bfb09010cc0145a0a95a3116aca0e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cannon ball 5
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 12
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46a205182c7e8254d97354897c995b29
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cannon ball 6
+      name: star 8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 12
-        height: 12
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,39 +258,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17cda1ead43bef54a906e8b73e3b95ed
+      spriteID: 5e64e8e0b0a6bd04e85bf7ca91fb87cc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cannon ball 7
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 0
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7bf6c34c14bb12f4abb4b7b4960e7533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cannon ball 8
+      name: star 9
       rect:
         serializedVersion: 2
         x: 24
         y: 0
-        width: 12
-        height: 12
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,7 +278,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c1f115e3262b8b448fe69199ef7e894
+      spriteID: 8300355a61fba8a44b71a8fca442ce3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star 10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe86f26b0f981c4c97d638a6018f5b1
       vertices: []
       indices: 
       edges: []
@@ -264,7 +306,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 30e9b303ad19bfe409d4e506ff570b16
+    spriteID: 9ae231b5da20f2a46848641f81ff32d6
     vertices: []
     indices: 
     edges: []

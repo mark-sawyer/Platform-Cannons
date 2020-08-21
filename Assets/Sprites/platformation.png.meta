@@ -26,6 +26,21 @@ TextureImporter:
     21300042: platformation 21
     21300044: platformation 22
     21300046: platformation 23
+    21300048: platformation 24
+    21300050: platformation 25
+    21300052: platformation 26
+    21300054: platformation 27
+    21300056: platformation 28
+    21300058: platformation 29
+    21300060: platformation 30
+    21300062: platformation 31
+    21300064: platformation 32
+    21300066: platformation 33
+    21300068: platformation 34
+    21300070: platformation 35
+    21300072: platformation 36
+    21300074: platformation 37
+    21300076: platformation 38
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -84,7 +99,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 192
+    maxTextureSize: 320
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -101,7 +116,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 24
+        y: 48
         width: 64
         height: 12
       alignment: 0
@@ -111,7 +126,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ffbb20b69895d347806f99437f69704
+      spriteID: 57f6aa43b8a671745989830cf34c6568
       vertices: []
       indices: 
       edges: []
@@ -120,8 +135,8 @@ TextureImporter:
       name: platformation 1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
+        x: 64
+        y: 48
         width: 64
         height: 12
       alignment: 0
@@ -131,7 +146,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa6d8658e3f68104e9dc4d6bb9eb17cf
+      spriteID: 693f4eff0254d174b85c4a073d40e054
       vertices: []
       indices: 
       edges: []
@@ -140,8 +155,8 @@ TextureImporter:
       name: platformation 2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
+        x: 64
+        y: 48
         width: 64
         height: 12
       alignment: 0
@@ -151,7 +166,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 519f64d0415234440a82172f9d821c0d
+      spriteID: 01c0f93c1ffe63445b7174c76454d440
       vertices: []
       indices: 
       edges: []
@@ -161,7 +176,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 24
+        y: 48
         width: 64
         height: 12
       alignment: 0
@@ -171,7 +186,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 673fd17a98fa47c4389d57d6a02efbc5
+      spriteID: 38fb2f8bd3619bb4db38eac1e62d7f61
       vertices: []
       indices: 
       edges: []
@@ -180,8 +195,8 @@ TextureImporter:
       name: platformation 4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
+        x: 64
+        y: 48
         width: 64
         height: 12
       alignment: 0
@@ -191,7 +206,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 23130a61fe2a10240955cc9b08153f4a
+      spriteID: 702b09e0990e91b4c922d9c41bf2c223
       vertices: []
       indices: 
       edges: []
@@ -201,7 +216,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 24
+        y: 48
         width: 64
         height: 12
       alignment: 0
@@ -211,7 +226,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0bfd381dd8bb5c478763ee7069be118
+      spriteID: 985531033fa541444931fd9bb22f8a9d
       vertices: []
       indices: 
       edges: []
@@ -220,8 +235,8 @@ TextureImporter:
       name: platformation 6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 24
+        x: 128
+        y: 48
         width: 64
         height: 12
       alignment: 0
@@ -231,7 +246,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e04b579127b01a499a3ac4222989089
+      spriteID: 73c3020b4496d644ba448ce28d040506
       vertices: []
       indices: 
       edges: []
@@ -240,8 +255,8 @@ TextureImporter:
       name: platformation 7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
+        x: 128
+        y: 48
         width: 64
         height: 12
       alignment: 0
@@ -251,7 +266,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71e5fead8b5d7ee4dbbf39ba2b99e2f1
+      spriteID: edc5c1e80cc59c7459150d2495b3631b
       vertices: []
       indices: 
       edges: []
@@ -260,8 +275,8 @@ TextureImporter:
       name: platformation 8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
+        x: 128
+        y: 48
         width: 64
         height: 12
       alignment: 0
@@ -271,7 +286,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c739749ca7e210439123013cec33dd1
+      spriteID: d395900a9b7e81647a850f2738ddee49
       vertices: []
       indices: 
       edges: []
@@ -280,8 +295,8 @@ TextureImporter:
       name: platformation 9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
+        x: 192
+        y: 48
         width: 64
         height: 12
       alignment: 0
@@ -291,7 +306,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce8efb57c70fad24a950a9eebe0bcf68
+      spriteID: 6c4dbe06ba717ce4f8385382501b4c38
       vertices: []
       indices: 
       edges: []
@@ -300,8 +315,8 @@ TextureImporter:
       name: platformation 10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
+        x: 256
+        y: 48
         width: 64
         height: 12
       alignment: 0
@@ -311,7 +326,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 821b16921069ede4db401c67880c16a7
+      spriteID: 80a01ab0fef7f584aa2fd1bb3c7e0198
       vertices: []
       indices: 
       edges: []
@@ -320,8 +335,8 @@ TextureImporter:
       name: platformation 11
       rect:
         serializedVersion: 2
-        x: 64
-        y: 24
+        x: 0
+        y: 36
         width: 64
         height: 12
       alignment: 0
@@ -331,7 +346,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d495c2f9c83ba84dbe18645c7df990c
+      spriteID: afb53e24d0f259d45b60844258c0f3b8
       vertices: []
       indices: 
       edges: []
@@ -340,8 +355,8 @@ TextureImporter:
       name: platformation 12
       rect:
         serializedVersion: 2
-        x: 128
-        y: 24
+        x: 64
+        y: 36
         width: 64
         height: 12
       alignment: 0
@@ -351,7 +366,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3d30e3067b34c54a9e3b780702ab591
+      spriteID: 162e9f96800ff184fa45084c9c101a3a
       vertices: []
       indices: 
       edges: []
@@ -361,7 +376,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 24
+        y: 36
         width: 64
         height: 12
       alignment: 0
@@ -371,7 +386,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f24586f1b7552b4a917e20a1a03179a
+      spriteID: 6be2be33f66de88489626de702edd5ed
       vertices: []
       indices: 
       edges: []
@@ -381,6 +396,106 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
+        y: 36
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2ab62fb1b06a34a8774ebb7f7ea3b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformation 15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 36
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85610991d7788cd459587304f27758c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformation 16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 36
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9644d877140d7439bc2343cf7e4826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformation 17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 36
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff0e0e95fcaa7d41bb0c0248e08226c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformation 18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 36
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ab9f53aecc147448d1f658cb8852db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformation 19
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 24
         width: 64
         height: 12
@@ -391,13 +506,93 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15a95c2d190a77c4f9d56a9ddf602bc2
+      spriteID: 434e584eb301ffe44a57ff499ac3b14f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformation 15
+      name: platformation 20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 24
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d6f3b21931970d43abfd40c770d7393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformation 21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 24
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3346b5565dee19d42873e35c8b6e3f03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformation 22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 24
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a05484475dcf70142b3e64412b2c0a52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformation 23
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 24
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e15071aa4151f3428850a8da55ef868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformation 24
       rect:
         serializedVersion: 2
         x: 0
@@ -411,13 +606,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f35673ffd4833084eb148abeb5b9fd10
+      spriteID: 4707f022d6ceada44bcd7fcd5649eef1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformation 16
+      name: platformation 25
       rect:
         serializedVersion: 2
         x: 64
@@ -431,13 +626,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e1bd2d7d13b30b46b5c806edd671764
+      spriteID: 3865a6117ea63ed438f7cc2364dfef30
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformation 17
+      name: platformation 26
       rect:
         serializedVersion: 2
         x: 128
@@ -451,13 +646,53 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 823fffab4fa2a3f4d9b2c43f689c4c30
+      spriteID: 71fead223da5f8246aec4eb92425e123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformation 18
+      name: platformation 27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 12
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85e5eeaafa5aa948a271ad7994bc521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformation 28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 12
+        width: 64
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e49aa6f0283e5469e9d0aeac0bea4f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformation 29
       rect:
         serializedVersion: 2
         x: 0
@@ -471,13 +706,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5169fa9a223a9534e80c5bebfd02f7ed
+      spriteID: 5cb6b59f2a0b95742a5f697f530109fe
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformation 19
+      name: platformation 30
       rect:
         serializedVersion: 2
         x: 64
@@ -491,16 +726,16 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bfd0a395495795348bf1d57d357248a8
+      spriteID: e3280e1d6d6c2ac4eba53db3966014bc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformation 20
+      name: platformation 31
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 0
         width: 64
         height: 12
@@ -511,16 +746,16 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 70087cf7f090dd84a8c5258d797b3ace
+      spriteID: bdf37afd0b119284a9da35cf9114fe53
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformation 21
+      name: platformation 32
       rect:
         serializedVersion: 2
-        x: 64
+        x: 192
         y: 0
         width: 64
         height: 12
@@ -531,27 +766,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2c1d0504ee3a20145a34e00f02e733b6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: platformation 22
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9ec0df7c8135fd44884a5b497272616d
+      spriteID: b822d949fd0deda4883618d201da7e7e
       vertices: []
       indices: 
       edges: []

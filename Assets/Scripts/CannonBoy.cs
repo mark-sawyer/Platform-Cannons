@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CannonBoy : MonoBehaviour {
     public LayerMask platformLayerMask;
@@ -15,6 +16,12 @@ public class CannonBoy : MonoBehaviour {
     private bool facingRight = true;
     private bool grounded;
     private bool appeared;
+    private bool starWasGrabbed;
+    private float transitionTimer;
+
+    private void Start() {
+        GameEvents.disappearCannonBoy.AddListener(disappearCannonBoy);
+    }
 
     private void Update() {
         if (appeared) {
@@ -34,6 +41,28 @@ public class CannonBoy : MonoBehaviour {
                 rb.velocity = new Vector2(rb.velocity.x, JUMP_VELOCITY);
             }
         }
+
+        else if (starWasGrabbed) {
+            print(transitionTimer);
+            transform.eulerAngles += new Vector3(0, 10, 0);
+            if (transitionTimer <= 0) {
+                print(transform.localScale.x);
+                if (Mathf.Abs(transform.localScale.x) > 0.02) {
+                    if (facingRight) {
+                        transform.localScale += new Vector3(-0.01f, 0, 0);
+                    }
+                    else {
+                        transform.localScale += new Vector3(0.01f, 0, 0);
+                    }
+                }
+                else {
+                    LevelManager.goToTheNextLevel();
+                }
+            }
+            else {
+                transitionTimer -= Time.deltaTime;
+            }
+        }
     }
 
 
@@ -47,8 +76,30 @@ public class CannonBoy : MonoBehaviour {
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 
-    public void setAppeared() {
+    public void setAppeared() {  // Called by animation end.
         appeared = true;
+    }
+
+    private void disappearCannonBoy() {
+        appeared = false;
+        rb.isKinematic = false;
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.zero;
+        anim.SetTrigger("disappear");
+    }
+
+    private void destroySelf() {
+        Destroy(gameObject);
+    }
+
+    public void beginNextLevelTransition() {
+        starWasGrabbed = true;
+        anim.SetBool("is airborne", true);
+        transitionTimer = 2;
+        appeared = false;
+        rb.isKinematic = false;
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.zero;
     }
 }
 

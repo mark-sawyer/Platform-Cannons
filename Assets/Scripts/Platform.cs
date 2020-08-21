@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Platform : MonoBehaviour {
-    void Start() {
-        
+    public Animator anim;
+
+    private void Start() {
+        GameEvents.disappearPlatforms.AddListener(startDisappearAnimation);
     }
 
-    void Update() {
-        
+    private void startDisappearAnimation() {
+        anim.SetTrigger("disappear");
+    }
+
+    private void destroySelf() {
+        Destroy(gameObject);
     }
 }
