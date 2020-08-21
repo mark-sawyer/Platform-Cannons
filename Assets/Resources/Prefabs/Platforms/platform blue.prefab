@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 6089987127591434830}
   - component: {fileID: 3254367685864777013}
   - component: {fileID: 7142263815874395708}
+  - component: {fileID: 114300305219997802}
   m_Layer: 8
   m_Name: platform blue
-  m_TagString: Untagged
+  m_TagString: blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,3 +175,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 7195375258322487522}
+--- !u!114 &114300305219997802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000913016384900348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060e4c26c630d2d47a63199135ecb285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

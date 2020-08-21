@@ -18,6 +18,8 @@ public class CannonBoy : MonoBehaviour {
     private bool appeared;
     private bool starWasGrabbed;
     private float transitionTimer;
+
+    public bool droppingWithBlue;
     private bool onGreen;
 
     private void Start() {
@@ -74,8 +76,8 @@ public class CannonBoy : MonoBehaviour {
         if (collider != null && collider.tag == "green") {
             onGreen = true;
         }
-        else {
-            onGreen = false;
+        else if (collider == null && droppingWithBlue) {
+            droppingWithBlue = false;
         }
 
         return collider != null;

@@ -10,7 +10,7 @@ public class LevelStageManager : MonoBehaviour {
 
     private float TIME_BEFORE_DISAPPEAR = 3;
     private float TIME_FOR_PLATFORM_TRANSFORM = 1.5f;
-    private float TIME_FOR_CANNON_BOY_TO_APPEAR = 2.1f;
+    private float TIME_FOR_CANNON_BOY_TO_APPEAR = 1.0f;
     private float TIME_FOR_PLATFORM_TO_DISAPPEAR = 1.1f;
 
     private void Start() {

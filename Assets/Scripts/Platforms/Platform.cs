@@ -10,6 +10,10 @@ public class Platform : MonoBehaviour {
     }
 
     private void startDisappearAnimation() {
+        if (GetComponent<Blue>()) {
+            GetComponent<Blue>().drop = false;
+        }
+
         anim.SetTrigger("disappear");
     }
 
