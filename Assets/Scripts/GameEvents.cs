@@ -8,4 +8,5 @@ public class GameEvents : MonoBehaviour {
     public static UnityEvent fireCannons = new UnityEvent();
     public static UnityEvent disappearCannons = new UnityEvent();
     public static UnityEvent platformation = new UnityEvent();
+    public static UnityEvent appearCannonBoy = new UnityEvent();
 }

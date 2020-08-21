@@ -14,24 +14,26 @@ public class CannonBoy : MonoBehaviour {
     private float horizontalMove;
     private bool facingRight = true;
     private bool grounded;
+    private bool appeared;
 
     private void Update() {
-        grounded = isGrounded();
-        anim.SetBool("is airborne", !grounded);
+        if (appeared) {
+            grounded = isGrounded();
+            anim.SetBool("is airborne", !grounded);
 
-        // Movement
-        horizontalMove = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(horizontalMove * MOVE_SPEED, rb.velocity.y);
-        anim.SetFloat("speed", Mathf.Abs(rb.velocity.x));
-        if ((horizontalMove < 0 && facingRight) || (horizontalMove > 0 && !facingRight)) {
-            flipSprite();
+            // Movement
+            horizontalMove = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(horizontalMove * MOVE_SPEED, rb.velocity.y);
+            anim.SetFloat("speed", Mathf.Abs(rb.velocity.x));
+            if ((horizontalMove < 0 && facingRight) || (horizontalMove > 0 && !facingRight)) {
+                flipSprite();
+            }
+
+            // Jumping
+            if (Input.GetKeyDown("space") && grounded) {
+                rb.velocity = new Vector2(rb.velocity.x, JUMP_VELOCITY);
+            }
         }
-
-        // Jumping
-        if (Input.GetKeyDown("space") && grounded) {
-            rb.velocity = new Vector2(rb.velocity.x, JUMP_VELOCITY);
-        }
-
     }
 
 
@@ -43,6 +45,10 @@ public class CannonBoy : MonoBehaviour {
     private void flipSprite() {
         facingRight = !facingRight;
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+    }
+
+    public void setAppeared() {
+        appeared = true;
     }
 }
 

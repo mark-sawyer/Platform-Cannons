@@ -8,17 +8,24 @@ public class LevelStageManager : MonoBehaviour {
     private float TIME_BEFORE_DISAPPEAR = 3;
 
     private void Start() {
-        GameEvents.fireCannons.AddListener(goToFiring);
-
         timer = TIME_BEFORE_DISAPPEAR;
     }
 
     private void Update() {
+        print(levelStage);
+
         switch (levelStage) {
+            case LevelStage.AIMING:
+                if (Input.GetKeyUp("space")) {
+                    levelStage = LevelStage.FIRING;
+                }
+                break;
+
             case LevelStage.FIRING:
                 timer -= Time.deltaTime;
 
                 if (Input.GetKeyDown("space")) {
+                    print("key down in firing");
                     GameEvents.platformation.Invoke();
                     levelStage = LevelStage.WAITING;
                 }
@@ -31,6 +38,10 @@ public class LevelStageManager : MonoBehaviour {
                 break;
 
             case LevelStage.WAITING:
+                if (Input.GetKeyDown("space")) {
+                    GameEvents.appearCannonBoy.Invoke();
+                    levelStage = LevelStage.PLATFORMING;
+                }
                 break;
 
             case LevelStage.PLATFORMING:
@@ -40,10 +51,6 @@ public class LevelStageManager : MonoBehaviour {
         if (levelStage == LevelStage.FIRING) {
             
         }
-    }
-
-    private void goToFiring() {
-        levelStage = LevelStage.FIRING;
     }
 }
 
