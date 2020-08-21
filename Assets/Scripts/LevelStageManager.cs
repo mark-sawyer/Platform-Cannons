@@ -4,59 +4,70 @@ using UnityEngine;
 
 public class LevelStageManager : MonoBehaviour {
     public static LevelStage levelStage;
-    private float timer;
-    private bool waitingButtonNotPressed;
+    public static float timer;
     public static bool doStuff;
+    public static bool beenThroughAFrame;
 
     private float TIME_BEFORE_DISAPPEAR = 3;
     private float TIME_FOR_PLATFORM_TRANSFORM = 1.5f;
     private float TIME_FOR_CANNON_BOY_TO_APPEAR = 2.1f;
     private float TIME_FOR_PLATFORM_TO_DISAPPEAR = 1.1f;
 
+    private void Start() {
+        GameEvents.fireCannons.AddListener(goToFiring);
+    }
+
     private void Update() {
         if (doStuff) {
+            print(levelStage);
             switch (levelStage) {
-                case LevelStage.AIMING:
-                    if (Input.GetKeyDown("space") && CannonInputManager.canFire) {
-                        levelStage = LevelStage.FIRING;
-                        timer = TIME_BEFORE_DISAPPEAR;
-                    }
-                    break;
-
                 case LevelStage.FIRING:
-                    timer -= Time.deltaTime;
+                    if (beenThroughAFrame) {
+                        timer -= Time.deltaTime;
 
-                    if (Input.GetKeyDown("r")) {
-                        GameEvents.disappearCannonBalls.Invoke();
-                        levelStage = LevelStage.AIMING;
-                    }
+                        if (Input.GetKeyDown("r")) {
+                            GameEvents.disappearCannonBalls.Invoke();
+                            levelStage = LevelStage.AIMING;
+                        }
 
-                    else if (Input.GetKeyDown("space")) {
-                        GameEvents.platformation.Invoke();
-                        levelStage = LevelStage.WAITING;
-                        doStuff = false;
-                        timer = TIME_FOR_PLATFORM_TRANSFORM;
-                    }
+                        else if (Input.GetKeyDown("space")) {
+                            GameEvents.platformation.Invoke();
+                            levelStage = LevelStage.WAITING;
+                            doStuff = false;
+                            beenThroughAFrame = false;
+                            timer = TIME_FOR_PLATFORM_TRANSFORM;
+                        }
 
-                    else if (timer <= 0) {
-                        GameEvents.disappearCannonBalls.Invoke();
-                        levelStage = LevelStage.AIMING;
+                        else if (timer <= 0) {
+                            GameEvents.disappearCannonBalls.Invoke();
+                            levelStage = LevelStage.AIMING;
+                        }
                     }
+                    else {
+                        beenThroughAFrame = true;
+                    }
+                    
                     break;
 
                 case LevelStage.WAITING:
-                    if (Input.GetKeyDown("space")) {
-                        GameEvents.appearCannonBoy.Invoke();  // For starting platform
-                        levelStage = LevelStage.PLATFORMING;
-                        doStuff = false;
-                        timer = TIME_FOR_CANNON_BOY_TO_APPEAR;
+                    if (beenThroughAFrame) {
+                        if (Input.GetKeyDown("space")) {
+                            GameEvents.appearCannonBoy.Invoke();  // For starting platform
+                            levelStage = LevelStage.PLATFORMING;
+                            doStuff = false;
+                            timer = TIME_FOR_CANNON_BOY_TO_APPEAR;
+                        }
+                        else if (Input.GetKeyDown("r")) {
+                            GameEvents.disappearPlatforms.Invoke();
+                            levelStage = LevelStage.AIMING;
+                            doStuff = false;
+                            timer = TIME_FOR_PLATFORM_TO_DISAPPEAR;
+                        }
                     }
-                    else if (Input.GetKeyDown("r")) {
-                        GameEvents.disappearPlatforms.Invoke();
-                        levelStage = LevelStage.AIMING;
-                        doStuff = false;
-                        timer = TIME_FOR_PLATFORM_TO_DISAPPEAR;
+                    else {
+                        beenThroughAFrame = true;
                     }
+                    
                     break;
                     
                 case LevelStage.PLATFORMING:
@@ -83,6 +94,12 @@ public class LevelStageManager : MonoBehaviour {
                 doStuff = true;
             }
         }
+    }
+
+    private void goToFiring() {
+        levelStage = LevelStage.FIRING;
+        beenThroughAFrame = false;
+        timer = TIME_BEFORE_DISAPPEAR;
     }
 }
 
