@@ -17,7 +17,7 @@ public class LevelStageManager : MonoBehaviour {
         if (doStuff) {
             switch (levelStage) {
                 case LevelStage.AIMING:
-                    if (Input.GetKeyUp("space")) {
+                    if (Input.GetKeyDown("space") && CannonInputManager.canFire) {
                         levelStage = LevelStage.FIRING;
                         timer = TIME_BEFORE_DISAPPEAR;
                     }
@@ -26,7 +26,12 @@ public class LevelStageManager : MonoBehaviour {
                 case LevelStage.FIRING:
                     timer -= Time.deltaTime;
 
-                    if (Input.GetKeyDown("space")) {
+                    if (Input.GetKeyDown("r")) {
+                        GameEvents.disappearCannonBalls.Invoke();
+                        levelStage = LevelStage.AIMING;
+                    }
+
+                    else if (Input.GetKeyDown("space")) {
                         GameEvents.platformation.Invoke();
                         levelStage = LevelStage.WAITING;
                         doStuff = false;
@@ -62,6 +67,10 @@ public class LevelStageManager : MonoBehaviour {
                         levelStage = LevelStage.AIMING;
                         doStuff = false;
                         timer = TIME_FOR_PLATFORM_TO_DISAPPEAR;
+                    }
+                    else if (Input.GetKeyDown("e")) {
+                        GameEvents.disappearCannonBoy.Invoke();
+                        GameEvents.appearCannonBoy.Invoke();
                     }
                     break;
             }

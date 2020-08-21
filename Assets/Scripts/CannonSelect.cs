@@ -8,9 +8,18 @@ public class CannonSelect : MonoBehaviour {
     private GameObject knob;
     private float maxSlider;
     private float minSlider;
-    private float VELOCITY_FUNCTION_SLOPE = 12.63157895f;
     private bool isBeingAimed;
     private bool isBeingAdjusted;
+
+    public static float CANNON_MIN_VELOCITY = 5;
+    public static float CANNON_MAX_VELOCITY = 10;
+    private float KNOB_MAX_DISTANCE = 0.59375f;
+    private float gradient;
+
+    private void Start() {
+        GameEvents.fireCannons.AddListener(removeTransparentSlider);
+        gradient = (CANNON_MAX_VELOCITY - CANNON_MIN_VELOCITY) / (2 * KNOB_MAX_DISTANCE);
+    }
 
     private void Update() {
         if (isBeingAimed) {
@@ -32,7 +41,7 @@ public class CannonSelect : MonoBehaviour {
 
                 // Set the velocity based off the knob position.
                 float difference = knob.transform.position.y - minSlider;
-                float velocity = VELOCITY_FUNCTION_SLOPE * difference + 5;
+                float velocity = gradient * difference + CANNON_MIN_VELOCITY;
                 GetComponent<CannonFire>().setCannonBallSpeed(velocity);
 
                 Destroy(slider);
@@ -67,8 +76,8 @@ public class CannonSelect : MonoBehaviour {
 
         slider = Instantiate(sliderPrefab, transform.position + new Vector3(1.1f, 0, 0), Quaternion.identity);
         knob = slider.transform.GetChild(0).gameObject;
-        maxSlider = slider.transform.position.y + 0.59375f;
-        minSlider = slider.transform.position.y - 0.59375f;
+        maxSlider = slider.transform.position.y + KNOB_MAX_DISTANCE;
+        minSlider = slider.transform.position.y - KNOB_MAX_DISTANCE;
 
         Color temp = slider.GetComponent<SpriteRenderer>().color;
         temp.a = 0.5f;
@@ -78,7 +87,9 @@ public class CannonSelect : MonoBehaviour {
         temp.a = 0.5f;
         knob.GetComponent<SpriteRenderer>().color = temp;
 
-        knob.transform.position += new Vector3(0, (19f / 240f) * velocity - (95f / 96f), 0);
+        float grad = (2 * KNOB_MAX_DISTANCE) / (CANNON_MAX_VELOCITY - CANNON_MIN_VELOCITY);
+        float c = -grad * ((CANNON_MAX_VELOCITY + CANNON_MIN_VELOCITY) / 2);
+        knob.transform.position += new Vector3(0, grad * velocity + c, 0);
     }
 
     public void removeTransparentSlider() {

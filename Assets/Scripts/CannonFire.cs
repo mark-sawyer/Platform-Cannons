@@ -6,7 +6,7 @@ public class CannonFire : MonoBehaviour {
     public CannonColour colour;
     private GameObject cannonBall;
     public Animator anim;
-    private float cannonBallSpeed = 12.5f;
+    private float cannonBallSpeed = (CannonSelect.CANNON_MAX_VELOCITY + CannonSelect.CANNON_MIN_VELOCITY) / 2;
 
     private void Start() {
         GameEvents.fireCannons.AddListener(fire);

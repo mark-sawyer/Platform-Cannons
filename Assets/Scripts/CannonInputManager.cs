@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CannonInputManager : MonoBehaviour {
-    [SerializeField] private LayerMask cannonLayer;
+    private LayerMask cannonLayer;
     public static bool canFire = true;
     private GameObject cannonMouseIsOver;
 
     private void Start() {
         GameEvents.cannonReleased.AddListener(setCanFire);
+        GameEvents.fireCannons.AddListener(resetCannonMouseIsOver);
 
         cannonLayer = LayerMask.GetMask("cannon");
     }
@@ -50,5 +51,9 @@ public class CannonInputManager : MonoBehaviour {
         if (ray.collider != null && ray.collider.gameObject == cannonMouseIsOver) {
             cannonMouseIsOver.GetComponent<CannonSelect>().showTransparentSlider();
         }
+    }
+
+    private void resetCannonMouseIsOver() {
+        cannonMouseIsOver = null;
     }
 }

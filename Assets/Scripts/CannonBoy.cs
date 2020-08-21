@@ -10,8 +10,8 @@ public class CannonBoy : MonoBehaviour {
     public Rigidbody2D rb;
     public Animator anim;
 
-    [SerializeField] private float JUMP_VELOCITY = 6;
-    [SerializeField] private float MOVE_SPEED = 5;
+    private float JUMP_VELOCITY = 6;
+    private float MOVE_SPEED = 5;
     private float horizontalMove;
     private bool facingRight = true;
     private bool grounded;
@@ -24,6 +24,9 @@ public class CannonBoy : MonoBehaviour {
     }
 
     private void Update() {
+        Debug.DrawRay(bc.bounds.center + new Vector3(bc.bounds.extents.x - 0.2f, -bc.bounds.extents.y - bc.bounds.size.y * 0.2f, 0),
+                      Vector3.left * bc.size.x, Color.red);
+
         if (appeared) {
             grounded = isGrounded();
             anim.SetBool("is airborne", !grounded);
@@ -43,10 +46,8 @@ public class CannonBoy : MonoBehaviour {
         }
 
         else if (starWasGrabbed) {
-            print(transitionTimer);
             transform.eulerAngles += new Vector3(0, 10, 0);
             if (transitionTimer <= 0) {
-                print(transform.localScale.x);
                 if (Mathf.Abs(transform.localScale.x) > 0.02) {
                     if (facingRight) {
                         transform.localScale += new Vector3(-0.01f, 0, 0);
@@ -67,7 +68,8 @@ public class CannonBoy : MonoBehaviour {
 
 
     private bool isGrounded() {
-        Collider2D collider = Physics2D.OverlapBox(bc.bounds.center + new Vector3(0, -bc.bounds.size.y * 0.2f, 0), bc.size, 0f, platformLayerMask);
+        Collider2D collider = Physics2D.OverlapBox(bc.bounds.center + new Vector3(0, -bc.bounds.size.y * 0.2f, 0),
+                                                   bc.bounds.size + new Vector3(-0.1f, 0, 0), 0f, platformLayerMask);
         return collider != null;
     }
 

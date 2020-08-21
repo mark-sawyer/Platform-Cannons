@@ -6,7 +6,6 @@ public class CannonBall : MonoBehaviour {
     public Rigidbody2D rb;
     public Animator anim;
     public GameObject platform;
-    [SerializeField] private float initialVelocity;
 
     private void Start() {
         GameEvents.disappearCannonBalls.AddListener(disappear);

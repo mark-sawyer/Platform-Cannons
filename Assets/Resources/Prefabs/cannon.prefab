@@ -184,6 +184,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colour: 0
-  cannonBall: {fileID: 1638653401311314627, guid: 5cf4ac4e79fc41e459c2492c7468fe4c,
-    type: 3}
-  anim: {fileID: 0}
+  anim: {fileID: 95884810365449672}
