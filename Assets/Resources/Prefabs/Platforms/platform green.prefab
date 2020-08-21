@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8862111339003073550}
   m_Layer: 8
   m_Name: platform green
-  m_TagString: Untagged
+  m_TagString: green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

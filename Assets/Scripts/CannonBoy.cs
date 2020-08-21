@@ -18,15 +18,13 @@ public class CannonBoy : MonoBehaviour {
     private bool appeared;
     private bool starWasGrabbed;
     private float transitionTimer;
+    private bool onGreen;
 
     private void Start() {
         GameEvents.disappearCannonBoy.AddListener(disappearCannonBoy);
     }
 
     private void Update() {
-        Debug.DrawRay(bc.bounds.center + new Vector3(bc.bounds.extents.x - 0.2f, -bc.bounds.extents.y - bc.bounds.size.y * 0.2f, 0),
-                      Vector3.left * bc.size.x, Color.red);
-
         if (appeared) {
             grounded = isGrounded();
             anim.SetBool("is airborne", !grounded);
@@ -40,7 +38,7 @@ public class CannonBoy : MonoBehaviour {
             }
 
             // Jumping
-            if (Input.GetKeyDown("space") && grounded) {
+            if (Input.GetKeyDown("space") && grounded && !onGreen) {
                 rb.velocity = new Vector2(rb.velocity.x, JUMP_VELOCITY);
             }
         }
@@ -57,6 +55,8 @@ public class CannonBoy : MonoBehaviour {
                     }
                 }
                 else {
+                    LevelStageManager.levelStage = LevelStage.AIMING;
+                    LevelManager.incrementLevelsCompleted();
                     LevelManager.goToTheNextLevel();
                 }
             }
@@ -70,6 +70,14 @@ public class CannonBoy : MonoBehaviour {
     private bool isGrounded() {
         Collider2D collider = Physics2D.OverlapBox(bc.bounds.center + new Vector3(0, -bc.bounds.size.y * 0.2f, 0),
                                                    bc.bounds.size + new Vector3(-0.1f, 0, 0), 0f, platformLayerMask);
+
+        if (collider != null && collider.tag == "green") {
+            onGreen = true;
+        }
+        else {
+            onGreen = false;
+        }
+
         return collider != null;
     }
 

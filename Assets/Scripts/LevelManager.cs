@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
     private static LevelManager singleton;
+    public static string[] levels = new string[] { "Level 1", "Level 2", "Level 3", "Level 4" };
+    public static int levelsCompleted = 0;
 
     void Awake() {
         if (singleton != null && singleton != this) {
@@ -17,6 +19,10 @@ public class LevelManager : MonoBehaviour {
     }
 
     public static void goToTheNextLevel() {
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene(levels[levelsCompleted]);
+    }
+
+    public static void incrementLevelsCompleted() {
+        levelsCompleted++;
     }
 }

@@ -163,9 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformLayerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
   bc: {fileID: 6721036447101658173}
   rb: {fileID: 7094911672333246666}
   anim: {fileID: 95569029598028560}
-  JUMP_VELOCITY: 5
-  MOVE_SPEED: 5

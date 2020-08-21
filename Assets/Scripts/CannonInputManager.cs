@@ -15,6 +15,8 @@ public class CannonInputManager : MonoBehaviour {
     }
 
     void Update() {
+        print("levelStage is: " + LevelStageManager.levelStage);
+        print("canFire is: " + canFire);
         if (LevelStageManager.levelStage == LevelStage.AIMING && canFire) {
             if (Input.GetKeyDown("space")) {
                 GameEvents.fireCannons.Invoke();
