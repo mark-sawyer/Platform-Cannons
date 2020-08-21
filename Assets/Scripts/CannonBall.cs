@@ -30,3 +30,11 @@ public class CannonBall : MonoBehaviour {
         Destroy(gameObject);
     }
 }
+
+public enum CannonColour {
+    PINK,
+    PURPLE,
+    BLUE,
+    GREEN,
+    ORANGE
+};
