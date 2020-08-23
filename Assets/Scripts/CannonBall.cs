@@ -6,6 +6,7 @@ public class CannonBall : MonoBehaviour {
     public Rigidbody2D rb;
     public Animator anim;
     public GameObject platform;
+    private bool disappearing;
 
     private void Start() {
         GameEvents.disappearCannonBalls.AddListener(disappear);
@@ -18,11 +19,14 @@ public class CannonBall : MonoBehaviour {
 
     private void disappear() {
         anim.SetTrigger("disappear");
+        disappearing = true;
     }
 
     private void becomePlatform() {
-        Instantiate(platform, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        if (!disappearing) {
+            Instantiate(platform, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }
 

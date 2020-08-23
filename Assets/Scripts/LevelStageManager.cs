@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelStageManager : MonoBehaviour {
+    public static GameObject modeText;
     public static LevelStage levelStage;
     public static float timer;
     public static bool doStuff;
@@ -16,11 +18,11 @@ public class LevelStageManager : MonoBehaviour {
 
     private void Start() {
         GameEvents.fireCannons.AddListener(goToFiring);
+        modeText = GameObject.Find("mode text");
     }
 
     private void Update() {
         if (doStuff) {
-            print(levelStage);
             switch (levelStage) {
                 case LevelStage.FIRING:
                     if (beenThroughAFrame) {
@@ -28,12 +30,12 @@ public class LevelStageManager : MonoBehaviour {
 
                         if (Input.GetKeyDown("r")) {
                             GameEvents.disappearCannonBalls.Invoke();
-                            levelStage = LevelStage.AIMING;
+                            changeLevelStage(LevelStage.AIMING);
                         }
 
                         else if (Input.GetKeyDown("space")) {
                             GameEvents.platformation.Invoke();
-                            levelStage = LevelStage.WAITING;
+                            changeLevelStage(LevelStage.WAITING);
                             doStuff = false;
                             beenThroughAFrame = false;
                             timer = TIME_FOR_PLATFORM_TRANSFORM;
@@ -41,7 +43,7 @@ public class LevelStageManager : MonoBehaviour {
 
                         else if (timer <= 0) {
                             GameEvents.disappearCannonBalls.Invoke();
-                            levelStage = LevelStage.AIMING;
+                            changeLevelStage(LevelStage.AIMING);
                         }
                     }
                     else {
@@ -54,13 +56,13 @@ public class LevelStageManager : MonoBehaviour {
                     if (beenThroughAFrame) {
                         if (Input.GetKeyDown("space")) {
                             GameEvents.appearCannonBoy.Invoke();  // For starting platform
-                            levelStage = LevelStage.PLATFORMING;
+                            changeLevelStage(LevelStage.PLATFORMING);
                             doStuff = false;
                             timer = TIME_FOR_CANNON_BOY_TO_APPEAR;
                         }
                         else if (Input.GetKeyDown("r")) {
                             GameEvents.disappearPlatforms.Invoke();
-                            levelStage = LevelStage.AIMING;
+                            changeLevelStage(LevelStage.AIMING);
                             doStuff = false;
                             timer = TIME_FOR_PLATFORM_TO_DISAPPEAR;
                         }
@@ -76,8 +78,9 @@ public class LevelStageManager : MonoBehaviour {
                         GameEvents.disappearPlatforms.Invoke();
                         GameEvents.disappearCannonBoy.Invoke();
                         GameEvents.relockKey.Invoke();
+                        Lock.locked = true;
 
-                        levelStage = LevelStage.AIMING;
+                        changeLevelStage(LevelStage.AIMING);
                         doStuff = false;
                         timer = TIME_FOR_PLATFORM_TO_DISAPPEAR;
                         aBlueHasDropped = false;
@@ -86,6 +89,7 @@ public class LevelStageManager : MonoBehaviour {
                         GameEvents.disappearCannonBoy.Invoke();
                         GameEvents.appearCannonBoy.Invoke();
                         GameEvents.relockKey.Invoke();
+                        Lock.locked = true;
                     }
                     break;
             }
@@ -101,9 +105,40 @@ public class LevelStageManager : MonoBehaviour {
     }
 
     private void goToFiring() {
-        levelStage = LevelStage.FIRING;
+        changeLevelStage(LevelStage.FIRING);
         beenThroughAFrame = false;
         timer = TIME_BEFORE_DISAPPEAR;
+    }
+
+    public static void changeLevelStage(LevelStage ls) {
+        levelStage = ls;
+        modeText.GetComponent<Text>().text = getStageText(ls);
+    }
+
+    public static string getStageText(LevelStage ls) {
+        string s = "";
+        switch (ls) {
+            case LevelStage.AIMING:
+                s = "Left click on cannon: aim\n" +
+                    "Right click on cannon: adjust power\n" +
+                    "Space: fire";
+                break;
+            case LevelStage.FIRING:
+                s = "Space: make platform\n" +
+                    "R: aim again";
+                break;
+            case LevelStage.WAITING:
+                s = "Space: confirm\n" +
+                    "R: aim again";
+                break;
+            case LevelStage.PLATFORMING:
+                s = "Space: jump\n" +
+                    "R: aim again\n" +
+                    "E: reset Cannonboy";
+                break;
+        }
+
+        return s;
     }
 }
 

@@ -72,11 +72,19 @@ public class CannonBoy : MonoBehaviour {
         Collider2D collider = Physics2D.OverlapBox(bc.bounds.center + new Vector3(0, -bc.bounds.size.y * 0.2f, 0),
                                                    bc.bounds.size + new Vector3(-0.1f, 0, 0), 0f, platformLayerMask);
 
-        if (collider != null && collider.tag == "green") {
-            onGreen = true;
-        }
-        else if (collider == null && droppingWithBlue) {
-            droppingWithBlue = false;
+        if (collider != null) {
+            if (collider.tag == "green") {
+                onGreen = true;
+                droppingWithBlue = false;
+            }
+            else if (collider.tag == "blue") {
+                onGreen = false;
+                droppingWithBlue = true;
+            }
+            else {
+                onGreen = false;
+                droppingWithBlue = false;
+            }
         }
 
         return collider != null;
